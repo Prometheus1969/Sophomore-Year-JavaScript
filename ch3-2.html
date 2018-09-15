@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+   <script>
+    function factorial(n)
+    {
+	  var i;
+	  var fac = 1;
+	  for( i=1; i<=n; i++)
+		fac = fac * i;
+	  return fac;
+    }
+	
+	while(1)
+	{
+		try{
+			var n = Number(prompt("请输入一个正整数："));
+			if( isNaN(n))
+				throw("please input a number");
+			break;
+		}
+		catch(ex){
+			alert(ex);
+		}
+	}
+	document.write(n +"! = " +factorial(n));
+  </script>
+ </body>
+</html>

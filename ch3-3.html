@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+    <form action="" method="post" name=myform" id="myform">
+	<p>第一个数
+		<input type="text" name="num1" size=20/> </p>
+	<p>第二个数
+		<input type="text" name="num2" size=20/> </p>
+
+	<table>
+		<tr>
+			<td>
+				<input type="button" name="addButton" id="addButton" value="+" onclick="compute('+')">
+			</td>
+			<td>
+				<input type="button" name="subButton" id="subButton" value="-" onclick="compute('-')">
+			</td>
+			<td>
+				<input type="button" name="mulButton" id="mulButton" value="*" onclick="compute('*')">
+			</td>
+			<td>
+				<input type="button" name="divButton" id="divButton" value="/" onclick="compute('/')">
+			</td>
+		</tr>
+	</table>
+	<p>计算结果
+		<input type="text" name="result" size=20> </p>
+    </form>
+	<script>
+		function compute(op)
+		{
+			var num1,num2;
+			num1 = parseFloat(document.myform.num1.value);
+			num2 = parseFloat(document.myform.num2.value);
+			if( op == '+' )
+				document.myform.result.value = num1 + num2;
+			if( op == '-' )
+				document.myform.result.value = num1 - num2;
+			if( op == '*' )
+				document.myform.result.value = num1 * num2;
+			if( op == '/' && num2 != 0 )
+				document.myform.result.value = num1 / num2;
+		}
+	</script>
+ </body>
+</html>
